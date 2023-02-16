@@ -3,15 +3,15 @@
 		max-width: 1280px;
 	}
 	.header_right {
-		display: flex;
 		align-items: center;
+		display: flex;
 	}
 	.main_homepage {
 		grid-template-columns: auto 250px;
 	}
 	.article_image {
-		width: auto;
 		height: auto;
+		width: auto;
 	}
 	.main_homepage_articles {
 		grid-template-columns: auto;
@@ -30,5 +30,44 @@
 		padding-left: 16px;
 	}
 	.article_homepage {
-		padding: 20px;}
+		padding: 20px;
+	}
+
+	.test {
+		display: grid;
+		/* grid-template-columns: auto auto auto; */
+		grid-auto-rows: 100px;
+		grid-gap: 10px;
+		grid-template-areas: 'box1 box1 box1 box2 box2 box2' 'box3 box3 box4 box4 box5 box5' 'box6 box6 box6 box6 box7 box7' 'box6 box6 box6 box6 box8 box8';
+	}
+	.test [class^='box'] {
+		border: 1px solid #b8b8b8;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.box1 {
+		grid-area: box1;
+	}
+	.box2 {
+		grid-area: box2;
+	}
+	.box3 {
+		grid-area: box3;
+	}
+	.box4 {
+		grid-area: box4;
+	}
+	.box5 {
+		grid-area: box5;
+	}
+	.box6 {
+		grid-area: box6;
+	}
+	.box7 {
+		grid-area: box7;
+	}
+	.box8 {
+		grid-area: box8;
+	}
 }
