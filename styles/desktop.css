@@ -16,8 +16,12 @@
 		display: flex;
 	}
 	.article_image {
-		width: 100%;
-		height: auto;
+		width: 150px;
+		aspect-ratio: 1;
 	}
-
+	.article_header_right{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 }

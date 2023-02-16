@@ -10,24 +10,30 @@
 		grid-template-columns: auto 250px;
 	}
 	.article_image {
-		height: auto;
-		width: auto;
+		width: 150px;
+		aspect-ratio: 1;
 	}
 	.main_homepage_articles {
 		grid-template-columns: auto;
+		margin-right: 20px;
 	}
 	.main_homepage_sidebar {
 		display: flex;
 	}
 	.article_header_right h2 {
-		font-size: 30px;
+		margin-top: -10px;
+		font-size: 26px;
 	}
 	.article_header {
 		flex-direction: row;
 	}
 	.article_header_right {
-		margin-top: -10px;
+		margin-top: 0;
+		margin-bottom: 0;
 		padding-left: 16px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 	.article_homepage {
 		padding: 20px;
