@@ -1,9 +1,34 @@
-@media (min-width: 768px) and (max-width: 1563px ){
-	.container{
+@media (min-width: 768px) {
+	.container {
 		max-width: 1280px;
 	}
 	.header_right {
 		display: flex;
 		align-items: center;
 	}
+	.main_homepage {
+		grid-template-columns: auto 250px;
+	}
+	.article_image {
+		width: auto;
+		height: auto;
+	}
+	.main_homepage_articles {
+		grid-template-columns: auto;
+	}
+	.main_homepage_sidebar {
+		display: flex;
+	}
+	.article_header_right h2 {
+		font-size: 30px;
+	}
+	.article_header {
+		flex-direction: row;
+	}
+	.article_header_right {
+		margin-top: -10px;
+		padding-left: 16px;
+	}
+	.article_homepage {
+		padding: 20px;}
 }

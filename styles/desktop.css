@@ -4,6 +4,19 @@
 	}
 	.header_right {
 		display: flex;
-		
+	}
+	.main_homepage {
+		grid-template-columns: auto 300px;
+	}
+	.main_homepage_articles {
+		grid-template-columns: auto auto;
+		grid-gap: 50px;
+	}
+	.main_homepage_sidebar {
+		display: flex;
+	}
+	.article_image {
+		width: 100%;
+		height: auto;
 	}
 }
