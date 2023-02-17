@@ -19,7 +19,7 @@ em {
 u {
 	color: var(--color-underline);
 }
-a{
+a {
 	color: var(--color-primary);
 }
 header {
@@ -85,7 +85,6 @@ header {
 	margin-right: 10px;
 	outline: none;
 	padding: 6px;
-	
 }
 #search_button {
 	padding: 8px 16px;
@@ -186,7 +185,7 @@ header {
 }
 
 .main_homepage_sidebar {
-	background-color: #cccccc7c;
+	background-color: #eee;
 	display: none;
 }
 
@@ -226,4 +225,29 @@ blockquote p::before {
 
 blockquote p::after {
 	content: '\201D';
+}
+.blog_title_header {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-style: bold;
+	font-size: 30px;
+}
+.subcribe_container {
+	position: relative;
+}
+.subcribe {
+	position: absolute;
+	top: -32px;
+	left: 10px;
+}
+.blog_main_content{
+	padding-left: 10px;
+	padding-right: 10px;
 }

@@ -46,7 +46,7 @@
 	}
 	.sidebar_post_list a {
 		text-decoration: none;
-		color: var(--color-second);
+		/* color: var(--color-second); */
 	}
 	.card_header_right h2 {
 		margin-top: -10px;
@@ -65,9 +65,6 @@
 	}
 	.card_homepage {
 		padding: 20px;
-	}
-
-	.blog_post_page {
 	}
 
 	.blog_title_header {
