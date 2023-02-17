@@ -24,4 +24,8 @@
 		flex-direction: column;
 		justify-content: space-between;
 	}
+	.main_article {
+		display: grid;
+		grid-template-columns: auto 350px;
+	}
 }

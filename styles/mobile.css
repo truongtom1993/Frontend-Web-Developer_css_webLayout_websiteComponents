@@ -19,6 +19,9 @@ em {
 u {
 	color: var(--color-underline);
 }
+a{
+	color: var(--color-primary);
+}
 header {
 	align-items: center;
 	backdrop-filter: blur(10px);
@@ -82,6 +85,14 @@ header {
 	margin-right: 10px;
 	outline: none;
 	padding: 6px;
+	
+}
+#search_button {
+	padding: 8px 16px;
+	background: transparent;
+	border-radius: 6px;
+	border: 1px solid #eee;
+	cursor: pointer;
 }
 #banner {
 	height: 300px;
@@ -187,4 +198,32 @@ footer {
 	justify-content: center;
 	margin-top: auto;
 	padding-top: 10px;
+}
+.main_article {
+	display: grid;
+	grid-template-columns: auto;
+	column-gap: 10px;
+}
+.blog_main_content {
+	border: 1px solid #eee;
+	border-radius: 6px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+blockquote {
+	margin: 0;
+}
+
+blockquote p {
+	padding: 15px;
+	background: #eee;
+	border-radius: 5px;
+}
+
+blockquote p::before {
+	content: '\201C';
+}
+
+blockquote p::after {
+	content: '\201D';
 }
