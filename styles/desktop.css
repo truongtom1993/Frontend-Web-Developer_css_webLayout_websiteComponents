@@ -19,7 +19,7 @@
 		width: 150px;
 		aspect-ratio: 1;
 	}
-	.card_header_right{
+	.card_header_right {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

@@ -241,7 +241,6 @@ blockquote p::after {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-style: bold;
 	font-size: 30px;
 }
 .subcribe_container {
@@ -255,4 +254,12 @@ blockquote p::after {
 .blog_main_content {
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+.article h1, .article h2, .article h3{
+
+}
+
+.article :where(h1, h2, h3){
+
 }
