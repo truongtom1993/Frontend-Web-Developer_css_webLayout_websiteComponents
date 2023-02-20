@@ -11,8 +11,8 @@
 		padding: 0;
 	}
 	.card_image {
-		width: 150px;
 		aspect-ratio: 1;
+		width: 150px;
 	}
 	.main_homepage_cards {
 		grid-template-columns: auto;
@@ -20,64 +20,72 @@
 		padding-left: 4px;
 	}
 	.newPost {
-		text-align: center;
 		font-size: 30px;
 		font-weight: 700;
-		margin-top: 10px;
 		margin-bottom: 20px;
+		margin-top: 10px;
+		text-align: center;
 	}
 	.main_homepage_sidebar {
+		background-color: #ececec;
+		border-radius: 4px;
 		display: flex;
 		flex-direction: column;
 		height: max-content;
-		border-radius: 4px;
-		background-color: #ececec;
 	}
 	.sidebar_post_list {
+		font-size: 24px;
 		list-style-type: none;
 		margin-top: 0;
 		padding: 0;
-		font-size: 24px;
 	}
 	.sidebar_post_list li {
 		line-height: 54px;
 		text-align: center;
 	}
 	.sidebar_post_list a {
-		text-decoration: none;
 		border-bottom: 1px solid #d4d4d4;
 		padding-bottom: 6px;
+		text-decoration: none;
 		/* color: var(--color-second); */
 	}
 	.card_header_right h2 {
-		margin-top: -10px;
 		font-size: 26px;
+		margin-top: -10px;
 	}
 	.card_header {
 		flex-direction: row;
 	}
 	.card_header_right {
-		margin-top: 0;
-		margin-bottom: 0;
-		padding-left: 16px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding-left: 16px;
+	}
+	.card_header_right h2 {
+		-webkit-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		word-break: break-word;
 	}
 	.card_homepage {
 		padding: 20px;
 	}
 
 	.blog_title_header {
-		margin-top: 20px;
-		margin-bottom: 20px;
-		width: 100%;
+		align-items: center;
+		display: flex;
 		height: 40px;
+		justify-content: center;
+		margin-bottom: 20px;
+		margin-top: 20px;
 		padding-left: 10px;
 		padding-right: 10px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		width: 100%;
 	}
 	.blog_title {
 		font-size: 50px;
@@ -87,9 +95,9 @@
 		position: relative;
 	}
 	.subcribe {
+		left: 10px;
 		position: absolute;
 		top: -32px;
-		left: 10px;
 	}
 
 	.main_article {
