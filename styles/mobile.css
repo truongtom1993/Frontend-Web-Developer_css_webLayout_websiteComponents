@@ -71,6 +71,7 @@ header {
 	border: 2px solid #ccc;
 	border-radius: 6px;
 	padding: 5px 10px;
+	font-weight: 700;
 }
 .navlink_header li a:hover {
 	color: rgb(105, 105, 105);
@@ -80,12 +81,15 @@ header {
 	display: none;
 }
 #search_header {
-	border: 1px solid #ccc;
+	border: 1px solid #eee;
 	border-radius: 4px;
 	color: var(--color-primary);
 	margin-right: 10px;
 	outline: none;
 	padding: 6px;
+}
+#search_header:focus{
+	border: 2px solid #aaa;
 }
 #search_button {
 	padding: 8px 16px;
@@ -96,6 +100,7 @@ header {
 }
 #banner {
 	height: 300px;
+	margin-top: 10px;
 	margin-bottom: 10px;
 	width: 100%;
 }
