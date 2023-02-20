@@ -1,3 +1,4 @@
+
 :root {
 	--color-primary: #024ca9;
 	--color-second: #9e3b14;
@@ -188,7 +189,6 @@ header {
 	background-color: #eee;
 	display: none;
 }
-
 footer {
 	background-color: #cccccc5d;
 	border-top: 1px solid #eee;
@@ -247,7 +247,7 @@ blockquote p::after {
 	top: -32px;
 	left: 10px;
 }
-.blog_main_content{
+.blog_main_content {
 	padding-left: 10px;
 	padding-right: 10px;
 }
