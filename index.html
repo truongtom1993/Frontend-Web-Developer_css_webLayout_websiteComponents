@@ -1,166 +1,61 @@
-<!DOCTYPE html>
+<!DOCTYPE >
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles/mobile.css">
-	<link rel="stylesheet" href="styles/tablet.css">
-	<link rel="stylesheet" href="styles/desktop.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="./logo.svg">
-	<title>Learn Udacity</title>
+	<script src="./js/app.js" defer></script>
 </head>
-
 <body>
-	<header class="header">
-		<div class="header_left">
-			<img src="./logo.svg" alt="logo_header" id="logo_header">
-			<ul class="navlink_header">
-				<li class="navlink_item"><a href="/" class="active">Homepage</a></li>
-				<li class="navlink_item"><a href="./pages/blog_post.html">Blog Posts</a></li>
-			</ul>
-		</div>
-		<div class="header_right">
-			<label for="search_header" class="search_header"><input type="text" id="search_header"><button
-					id="search_button">Search</button></label>
-		</div>
-	</header>
-	<main class="container">
-		<div class="banner">
-			<img src="https://via.placeholder.com/1000x300.webp/C5C5C5/FFFFFF/?text=Banner" alt="This is banner" id="banner">
-		</div>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header" id="_922ba6" data-truong="truongtom" >
+    <nav class="navbar__menu" id="_2f60c8" >
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list" id="_2feeb3" ></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>Landing Page </h1>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Section 1" class="your-active-class">
+      <div class="landing__container">
+        <h2>Section 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
 
-		<section class="main_homepage" id="_788be6">
-			<div class="main_homepage_cards">
-				<div class="card_homepage">
-					<div class="card_header">
-						<img src="https://via.placeholder.com/150.webp/C5C5C5/FFFFFF/?text=Image" alt="card Image"
-							class="card_image">
-						<div class="card_header_right">
-							<h2 class="card_header_right_title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
-								iste Lorem ipsum dolor sit amet
-								consectetur adipisicing elit. Accusamus, accusantium?</h2>
-							<div class="card_header_right_detail">
-								<strong class="strong">Feburary 19, 2023</strong>
-								<span class="separate">-</span>
-								<em class="em">1 min read</em>
-							</div>
-						</div>
-					</div>
-					<p class="card_content">
-						<em class="em">Lorem, ipsum dolor sit amet</em> consectetur adipisicing elit. Quam sequi perspiciatis eius
-						<strong class="strong">assumenda</strong>, atque cum
-						neque aborum. Laborum, <u class="u">in fuga.</u>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Dolor
-						mollitia possimus in atque earum autem omnis iste illum magni deserunt? Lorem ipsum dolor sit amet
-						consectetur adipisicing elit. Doloribus voluptate nihil impedit quisquam cumque. Perferendis sapiente quos
-						sunt odio vero.
-					</p>
-					<button class="card_footer">
-						<a href="./pages/blog_post.html" class="continue_reading">Continue Reading >></a>
-					</button>
-				</div>
-				<div class="card_homepage">
-					<div class="card_header">
-						<img src="https://via.placeholder.com/150.webp/C5C5C5/FFFFFF/?text=Image" alt="card Image"
-							class="card_image">
-						<div class="card_header_right">
-							<h2 class="card_header_right_title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos magni
-								neque assumenda iusto facilis veniam nemo mollitia est molestias possimus?</h2>
-							<div class="card_header_right_detail">
-								<strong class="strong">Feburary 21, 2023</strong>
-								<span class="separate">-</span>
-								<em class="em">2 min read</em>
-							</div>
-						</div>
-					</div>
-					<p class="card_content">
-						<em class="em">Lorem, ipsum dolor sit amet</em> consectetur adipisicing elit. Quam sequi perspiciatis eius
-						<strong class="strong">Lorem, ipsum dolor.</strong>, atque cum
-						neque aborum. Laborum, <u class="u">Lorem ipsum dolor sit.</u>Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Nobis consequuntur cupiditate laborum quidem iste autem eos ut! Corporis error, officiis
-						officia eaque dolores nam doloremque, deleniti eos nesciunt iste sed.
-					</p>
-					<button class="card_footer">
-						<a href="./pages/blog_post.html" class="continue_reading">Continue Reading >></a>
-					</button>
-				</div>
-				<div class="card_homepage">
-					<div class="card_header">
-						<img src="https://via.placeholder.com/150.webp/C5C5C5/FFFFFF/?text=Image" alt="card Image"
-							class="card_image">
-						<div class="card_header_right">
-							<h2 class="card_header_right_title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
-								ducimus quam nulla possimus unde ad quasi aliquid sit velit exercitationem neque quia maxime, sunt
-								aliquam, perspiciatis autem aut nam perferendis?</h2>
-							<div class="card_header_right_detail">
-								<strong class="strong">Feburary 20, 2023</strong>
-								<span class="separate">-</span>
-								<em class="em">1 min read</em>
-							</div>
-						</div>
-					</div>
-					<p class="card_content">
-						<em class="em">Lorem, ipsum dolor sit amet</em> consectetur adipisicing elit. Quam sequi perspiciatis eius
-						<strong class="strong">assumenda</strong>, atque cum
-						neque aborum. Laborum, <u class="u">in fuga.</u>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Dolor
-						mollitia possimus in atque earum autem omnis iste illum magni deserunt? Lorem ipsum dolor sit amet
-						consectetur adipisicing elit. Doloribus voluptate nihil impedit quisquam cumque. Perferendis sapiente quos
-						sunt odio vero.
-					</p>
-					<button class="card_footer">
-						<a href="./pages/blog_post.html" class="continue_reading">Continue Reading >></a>
-					</button>
-				</div>
-				<div class="card_homepage">
-					<div class="card_header">
-						<img src="https://via.placeholder.com/150.webp/C5C5C5/FFFFFF/?text=Image" alt="card Image"
-							class="card_image">
-						<div class="card_header_right">
-							<h2 class="card_header_right_title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis,
-								iste Lorem ipsum dolor sit amet
-								consectetur adipisicing elit. Accusamus, accusantium?</h2>
-							<div class="card_header_right_detail">
-								<strong class="strong">Feburary 19, 2023</strong>
-								<span class="separate">-</span>
-								<em class="em">1 min read</em>
-							</div>
-						</div>
-					</div>
-					<p class="card_content">
-						<em class="em">Lorem, ipsum dolor sit amet</em> consectetur adipisicing elit. Quam sequi perspiciatis eius
-						<strong class="strong">assumenda</strong>, atque cum
-						neque aborum. Laborum, <u class="u">in fuga.</u>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Dolor
-						mollitia possimus in atque earum autem omnis iste illum magni deserunt? Lorem ipsum dolor sit amet
-						consectetur adipisicing elit. Doloribus voluptate nihil impedit quisquam cumque. Perferendis sapiente quos
-						sunt odio vero.
-					</p>
-					<button class="card_footer">
-						<a href="./pages/blog_post.html" class="continue_reading">Continue Reading >></a>
-					</button>
-				</div>
-			</div>
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section2" data-nav="Section 2">
+      <div class="landing__container">
+        <h2>Section 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
 
-			<div class="main_homepage_sidebar">
-				<p class="newPost">New Post</p>
-				<ul class="sidebar_post_list">
-					<li><a href="#">Post Number 1</a></li>
-					<li><a href="#">Post Number 2</a></li>
-					<li><a href="#">Post Number 3</a></li>
-					<li><a href="#">Post Number 4</a></li>
-					<li><a href="#">Post Number 5</a></li>
-					<li><a href="#">Post Number 6</a></li>
-					<li><a href="#">Post Number 7</a></li>
-				</ul>
-			</div>
-		</section>
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+    <section id="section3" data-nav="Section 3">
+      <div class="landing__container">
+        <h2>Section 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
 
-	</main>
-	<footer><span>Copyright 2023 by TruongDN2@fsoft.com.vn</span></footer>
+        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="page__footer">
+    <p>&copy Udacity</p>
+  </footer>
 
 </body>
-
 </html>
