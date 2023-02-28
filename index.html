@@ -8,7 +8,7 @@
 	<title>Manipulating the DOM</title>
 	<!-- Load Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
-	<!-- Load Styles -->
+	<!-- Load Styles and script (asynchrous) -->
 	<link href="css/styles.css" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="./logo.svg">
 	<script src="./js/app.js" defer></script>
@@ -18,7 +18,10 @@
 	<!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
 	<header class="page__header" id="_922ba6" data-truong="truongtom">
-
+		<nav class="navbar__menu" id="_087d49" >
+			<!-- Navigation starts as empty UL that will be populated with JS -->
+			<ul id="navbar__list" ></ul>
+		</nav>
 	</header>
 	<main>
 		<header class="main__hero">
