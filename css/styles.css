@@ -90,7 +90,8 @@ section {
 	color: #000;
 }
 
-.navbar__menu .menu__link:hover {
+.navbar__menu .menu__link:hover,
+.menu__link.active {
 	background: #333;
 	color: #fff;
 	transition: ease 0.3s all;
@@ -102,7 +103,13 @@ section {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	height: fit-content;
 	z-index: 5;
+	transition: top 0.3s;
+}
+
+.page__header.minify {
+	top: -80px;
 }
 
 /* Footer Styles */
@@ -227,6 +234,21 @@ section.active .landing__container::after {
 		transform: rotate(360deg) translate(-1em) rotate(-360deg);
 	}
 }
-.navbar_item:hover{
+.navbar_item:hover {
 	cursor: pointer;
+}
+.menu__link {
+	width: max-content;
+}
+@media screen and (width <= 640px) {
+	.navbar__list {
+		overflow-y: hidden;
+		overflow-x: auto;
+	}
+	.navbar__menu ul{
+		justify-content: start;
+	}
+	.menu__link{
+		font-size: 0.8rem;
+	}
 }
