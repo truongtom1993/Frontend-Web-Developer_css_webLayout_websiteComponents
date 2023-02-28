@@ -78,7 +78,7 @@ createNavBar()
 
 const body = document.body;
 const eventBody = (event) => {
-	console.info(`🎁 js/app.js	Line:81	ID:70b7ff`,event.);
+	console.info(`🎁 js/app.js	Line:81	ID:70b7ff`,);
 	
 }
 body.addEventListener('wheel', eventBody)
