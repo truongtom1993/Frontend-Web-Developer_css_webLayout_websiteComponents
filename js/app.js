@@ -29,6 +29,16 @@ function throttle(callback, limit) {
 		}
 	};
 }
+
+function debounce(func, timeout = 300) {
+	let timer;
+	return function () {
+		clearTimeout(timer);
+		timer = setTimeout(() => {
+			func.apply(this, arguments);
+		}, timeout);
+	};
+}
 function makeActive(sections, aTagList) {
 	const value = 471;
 	for (let index = 0; index < sections.length; index++) {
@@ -76,31 +86,26 @@ for (let index = 0; index < sectionList.length; index++) {
 	ulNavbar.insertAdjacentElement('beforeend', liTag);
 }
 let id;
+const eventHideHeader = debounce(() => {
+	header.classList.add('minify');
+}, 1000)
 const eventBody = throttle(event => {
 	// Add class 'active' to section when near top of viewport
 	makeActive(sectionList, aTagList);
 
-	// Scroll to anchor ID using scroll event
-	// const currentValue = window.pageYOffset;
-	// if (preValue >= currentValue) {
-	// 	setTimeout(() => {
-	// 		header.classList.remove('minify');
-	// 	}, 100);
-	// } else {
-	// 	header.classList.add('minify');
-	// }
-	// preValue = currentValue;
-
 	header.classList.remove('minify');
-	if (id) {
-		clearTimeout(id)
-	} else {
-		const newId = setTimeout(() => {
-			header.classList.add('minify');
-			id = newId
-		}, 1500);
-	}
+	eventHideHeader();
 }, 20);
 
 body.addEventListener('wheel', eventBody);
 // End Main Functions
+
+function isElementInViewport(el) {
+	var rect = el.getBoundingClientRect();
+	return (
+		rect.top >= 0 &&
+		rect.left >= 0 &&
+		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+		rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+	);
+}
