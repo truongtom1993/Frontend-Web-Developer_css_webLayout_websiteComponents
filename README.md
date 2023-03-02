@@ -1,17 +1,37 @@
-# Landing Page Project
+# Front End Nanodegree Program
 
-## Instructions
+Front End Nanodegree Content & Project Resources
 
-1. The project is publicly available at [Github Page](https://truongtom1993.github.io/Frontend-Web-Developer_css_webLayout_websiteComponents/)
+## Table of Contents
 
-2. This project of mine will describe how Javascript affects a web page
+* [Projects](#projects)
+* [Courses](#courses)
+* [Style-Guide](#style-guide)
 
-3. In this landing page, there are many sections that when you scroll the page, the sections in the viewport will be appended with the class 'active', with css effects
+## Projects
 
-4. For each section added to the html file, a corresponding button will be added to the navigation bar, when clicking on this button, the web page will automatically scroll down to the section corresponding to that button.
+The following is a list of current projects required to complete the Front End Nanodegree.
 
-5. When you stop scrolling for 1 second, the navigation bar will be automatically hidden, and when you continue to scroll, the navigation bar will reappear.
+Note that projects that do not include associated starter code are not linked here.
 
-6. My javascript code is written in app.js file for your reference.
+1. Personal Blog Website
+2. [Landing Page](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)
+3. [Weather Journal App](https://github.com/udacity/fend/tree/refresh-2019/projects/weather-journal-app)
+4. [Evaluate A News Article with Natural Language Processing](https://github.com/udacity/fend/tree/refresh-2019/projects/evaluate-news-nlp)
+5. Capstone - Travel App
 
-Thank you.
+## Courses
+
+The following is a list of the courses associated with the Front End Nanodegree.
+
+* C1 - CSS, Website Layout, Website Components
+* C2 - JavaScript & The DOM
+* C3 - Web API's and Asynchronous Applications
+* C4 - Build Tools and Single Page Web Apps
+* C5 - Capstone
+
+## Style-Guide
+
+See below for the Udacity Style Guide used thoroughout the Front End Nanodegree.
+
+* [Nanodegree Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/)
