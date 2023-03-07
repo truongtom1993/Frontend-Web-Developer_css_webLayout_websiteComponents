@@ -1,6 +1,7 @@
 # About
 
-This project is created to learn about webpack
+This project is created to learn about webpack.
+Required install Nodejs version 11.15.0
 
 # Tutorial
 1. Run: npm install
