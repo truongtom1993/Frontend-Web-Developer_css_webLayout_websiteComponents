@@ -9,8 +9,14 @@ function handleSubmit(event) {
 	// check what text was put into the form field
 	let formText = document.getElementById('name').value;
 	checkForName(formText);
+	const validate = validateName(formText);
+
 	if (validateName(formText) === 'Not be blank') {
 		alert('The input field cannot be blank');
+		return;
+	} else if (validate === 'Not be URL') {
+		alert('The input field not be URL');
+		return;
 	}
 	console.log('::: Form Submitted :::');
 	fetch('http://localhost:8080/test', {
@@ -35,7 +41,7 @@ function callApiMeaningCloud(data) {
 	formdData.append('key', options.key);
 	formdData.append('lang', options.lang);
 	formdData.append('model', options.model);
-	formdData.append('txt', options.txt);
+	formdData.append('url', options.url);
 
 	fetch(data.url, {
 		method: 'POST',
@@ -53,6 +59,9 @@ function callApiMeaningCloud(data) {
 function validateName(value) {
 	if (!value) {
 		return 'Not be blank';
+	}
+	if (!/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/.test(value)) {
+		return 'Not be URL';
 	}
 }
 export { handleSubmit, validateName };

@@ -30,7 +30,7 @@ app.post('/test', function (req, res) {
 		key: process.env.API_KEY,
 		lang: 'en',
 		model: 'general',
-		txt: data,
+		url: data,
 	};
 	const result = {
 		url: meaningCloudApi,
