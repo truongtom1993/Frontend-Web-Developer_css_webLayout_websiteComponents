@@ -4,7 +4,7 @@ This project is created to learn about webpack
 
 # Tutorial
 1. Run: npm install
-2. Run: npm build
+2. Run: npm run build-prod
 3. Run: npm start
 
 # Note:
