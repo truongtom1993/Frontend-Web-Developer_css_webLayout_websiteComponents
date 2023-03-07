@@ -11,9 +11,5 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 const formElement = $('form');
-const inputName = $('#name');
 
-formElement.addEventListener(`submit`, event => {
-	event.preventDefault();
-	console.info(`🎁 src/client/index.js	Line:16	ID:083dfb`, inputName.value);
-});
+formElement.addEventListener(`submit`, handleSubmit);
