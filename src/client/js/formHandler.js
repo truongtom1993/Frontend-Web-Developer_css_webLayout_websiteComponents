@@ -9,7 +9,9 @@ function handleSubmit(event) {
 	// check what text was put into the form field
 	let formText = document.getElementById('name').value;
 	checkForName(formText);
-
+	if (validateName(formText) === 'Not be blank') {
+		alert('The input field cannot be blank');
+	}
 	console.log('::: Form Submitted :::');
 	fetch('http://localhost:8080/test', {
 		method: 'POST',
@@ -48,4 +50,9 @@ function callApiMeaningCloud(data) {
 			console.info(`🎁 src/client/js/formHandler.js	Line:34	ID:e2098a`, err);
 		});
 }
-export { handleSubmit };
+function validateName(value) {
+	if (!value) {
+		return 'Not be blank';
+	}
+}
+export { handleSubmit, validateName };
